@@ -5,7 +5,8 @@ class Lighting
 public:
 	Lighting();
 
-
+
+
 };
 
 class Material

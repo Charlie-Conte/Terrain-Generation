@@ -215,12 +215,10 @@ void setup(void)
 	terrain[MAP_SIZE - 1][0] = (linearRand(0.0f, randomMax) * 2 * roughness) - roughness;
 	terrain[MAP_SIZE - 1][MAP_SIZE - 1] = (linearRand(0.0f, randomMax) * 2 * roughness) - roughness;
 
-
-	//cout << "Start\n";
 	while (stepSize >= 2.0f)
 	{
 		int hStepSize = stepSize / 2;
-		//cout << endl << "Itteration: " << itteration << endl;
+		//Square
 		for (int x = 0; x < MAP_SIZE - 1; x += stepSize)
 		{
 			for (int y = 0; y < MAP_SIZE - 1; y += stepSize)
@@ -235,8 +233,7 @@ void setup(void)
 				//cout << "(" << x << "," << y << ")\n";
 			}
 		}
-
-
+		//Diamond
 		for (int x = 0; x < MAP_SIZE - 1; x += hStepSize)
 		{
 			for (int y = (x + hStepSize) % stepSize; y < MAP_SIZE - 1; y += stepSize)
@@ -255,9 +252,6 @@ void setup(void)
 				//		cout << "(" << x << "," << y << ")\t\t" << "Height: " << avgHeightRan << endl;
 			}
 		}
-
-
-
 		randomMax = randomMax / 2;
 		stepSize = stepSize / 2;
 		itteration++;

@@ -19,7 +19,7 @@ using namespace std;
 using namespace glm;
 
 // Size of the terrain
-const int MAP_SIZE = 65;
+const int MAP_SIZE = 129;
 
 const int SCREEN_WIDTH = 500;
 const int SCREEN_HEIGHT = 500;
@@ -38,7 +38,8 @@ struct Quad
 
 Quad quadNormals[MAP_SIZE - 1][MAP_SIZE - 1];
 glm::vec3 vertNormals[MAP_SIZE][MAP_SIZE];
-static mat3 normalMat = mat3(1.0);
+static mat3 normalMat = mat3(1.0);
+
 
 struct Vertex
 {
